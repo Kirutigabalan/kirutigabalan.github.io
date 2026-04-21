@@ -98,7 +98,11 @@
     .hero-media,
     .section-card,
     .project-card,
-    .contact-card {
+    .contact-card,
+    .challenge,
+    .step-card,
+    .result-chip,
+    .takeaway-card {
       background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -599,12 +603,12 @@
 
         <div class="hero-media">
           <div class="media-placeholder" style="min-height:380px;">
-            <video src="videos/hero.mp4" autoplay muted loop playsinline controls style="width:100%; height:100%; object-fit:cover; border-radius:16px;"></video>
+            <video src="videos/pivaug80002.mp4" autoplay muted loop playsinline controls style="width:100%; height:100%; object-fit:cover; border-radius:16px;"></video>
           </div>
           <div class="quick-stats">
             <div class="stat"><strong>6+ years</strong><span class="muted">Electrochemical research experience</span></div>
-            <div class="stat"><strong>3 years </strong><span class="muted">Cleanroom fabrication, 3D printing and experimental setup development</span></div>
-             <div class="stat"><strong><1 year </strong><span class="muted">Industry experience in electrolyte formualtion and medical devices </span></div>
+            <div class="stat"><strong>3 years</strong><span class="muted">Cleanroom fabrication, 3D printing and experimental setup development</span></div>
+            <div class="stat"><strong>&lt;1 year</strong><span class="muted">Industry experience in electrolyte formulation and medical devices</span></div>
           </div>
         </div>
       </div>
@@ -651,7 +655,6 @@
                 <span class="tag">Electrochemistry</span>
                 <span class="tag">Data Analysis</span>
               </div>
-              
             </div>
           </article>
 
@@ -669,7 +672,6 @@
                 <span class="tag">Electrochemistry</span>
                 <span class="tag">Data Analysis</span>
               </div>
-              
             </div>
           </article>
         </div>
@@ -682,7 +684,7 @@
           <div>
             <h2>Research Highlights</h2>
           </div>
-          <p>Projects spanning microfluidics, magnetically enhanced extraction, alloy-anode modeling, and mechanics-aware Li-ion modeling.</p>
+          <p>Projects spanning microfluidics, microfabrication, magnetically enhanced extraction, alloy-anode modeling, and mechanics-aware Li-ion modeling.</p>
         </div>
 
         <div class="project-grid">
@@ -717,8 +719,8 @@
             </div>
             <div class="media-stack">
               <div class="media-placeholder">
-                <button class="lightbox-trigger" type="button" data-media-type="image" data-src="images/flow-phantom-cad.png">
-                  <img src="images/flow-phantom-cad.png" alt="CAD model of microvascular flow phantom and the experimental setup" />
+                <button class="lightbox-trigger" type="button" data-media-type="image" data-src="images/Phantom-CAD.png">
+                  <img src="images/Phantom-CAD.png" alt="CAD model of microvascular flow phantom and the experimental setup" />
                 </button>
               </div>
               <div class="media-placeholder small">
@@ -726,16 +728,16 @@
                   <img src="images/flow-phantom-simulation.png" alt="Variation in the wall shear stress obtained can be used to distinguish between healthy and diseased patients." />
                 </button>
               </div>
-              
             </div>
           </article>
+
           <article class="project-card">
             <div class="project-copy">
               <h3>Magnetically Enhanced Electrochemical Extraction</h3>
               <p><strong>Problem:</strong> Low extraction efficiency and limited throughput in microfluidic electrochemical systems.</p>
               <p><strong>Method:</strong> Designed microfluidic devices using CAD and 3D printing. Introduced localized magnetic fields to manipulate ion transport and flow behavior. Analyzed over 100 samples using image-based flow diagnostics.</p>
               <ul>
-                <li><strong>125× increase</strong> in extraction efficiency</li>
+                <li><strong>1.25× increase</strong> in extraction efficiency</li>
                 <li><strong>4× improvement</strong> in throughput</li>
                 <li>Reduced setup time by 30% via process optimization</li>
               </ul>
@@ -758,17 +760,56 @@
               </div>
             </div>
             <div class="media-stack">
-              <div class="media-placeholder">
-                <button class="lightbox-trigger" type="button" data-media-type="video" data-src="videos/microfluidic.mp4" aria-label="Open microfluidic extraction video">
-                  <video src="videos/microfluidic.mp4" autoplay muted loop playsinline onerror="this.parentElement.innerHTML='Add video: videos/microfluidic.mp4'"></video>
+              <div class="media-placeholder small">
+                <button class="lightbox-trigger" type="button" data-media-type="image" data-src="images/pdmscopper.png">
+                  <img src="images/pdmscopper.png" alt="Microfluidic cell made of PDMS with copper electrodes" />
                 </button>
               </div>
               <div class="media-placeholder small">
                 <button class="lightbox-trigger" type="button" data-media-type="image" data-src="images/microfluidic.gif" aria-label="Open flow visualization GIF">
-                  <img src="images/microfluidic.gif" alt="Flow visualization GIF showing local 3D vortices around growing ddendrite tips" onerror="this.parentElement.innerHTML='Add GIF: images/microfluidic.gif'" />
+                  <img src="images/microfluidic.gif" alt="Flow visualization GIF showing local 3D vortices around growing dendrite tips" onerror="this.parentElement.innerHTML='Add GIF: images/microfluidic.gif'" />
                 </button>
               </div>
-              
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-copy">
+              <h3>Process Development &amp; Troubleshooting in Microfabrication</h3>
+              <p><strong>Problem:</strong> Microfluidic devices for controlled electrochemical experiments required sub-2 µm feature fidelity, but SU-8 mask delamination during HF etching and unreliable PDMS–glass plasma bonding were causing widened channels, poor edge definition, and leaking devices.</p>
+              <p><strong>Method:</strong> Ran end-to-end photolithography and soft lithography processes in a cleanroom environment. Applied DOE-style screening across dehydration bake, exposure dose, and hard-bake temperature to isolate the root cause of SU-8 mask delamination. For plasma bonding, systematically reduced O₂ plasma exposure from 60 s to 20 s to find a stable Si–OH activation window. Validated outcomes with profilometry (Dektak 6M), optical microscopy (Zeiss Axioscope 2 MAT), and leak testing.</p>
+              <ul>
+                <li><strong>&lt; 2 µm</strong> feature deviation with stable SU-8 masking</li>
+                <li>Optimized plasma bonding to <strong>22 ± 2 s</strong>, eliminating leak failures</li>
+                <li>Repeatable fabrication across <strong>10+ photolithography</strong> and <strong>100+ soft lithography</strong> devices</li>
+                <li>Standardized SOPs for plasma bonding and SU-8 processing</li>
+              </ul>
+              <div class="button-row">
+                <a class="button" href="lithography.html">View Project</a>
+                <a class="button" href="Lithography.pdf" target="_blank" rel="noopener">Slide Deck</a>
+              </div>
+              <div class="tool-row">
+                <span class="tag">Photolithography</span>
+                <span class="tag">Soft Lithography</span>
+                <span class="tag">DOE</span>
+                <span class="tag">Cleanroom</span>
+              </div>
+            </div>
+            <div class="media-stack">
+              <div class="media-placeholder" style="min-height: 210px;">
+                <div style="padding: 20px; text-align: center;">
+                  <div style="font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 8px;">Technical Challenge</div>
+                  <div style="color: var(--text); font-weight: 600; margin-bottom: 6px;">SU-8 delamination during HF etch</div>
+                  <div style="color: var(--muted); font-size: 0.9rem;">Resolved via DOE on dehydration bake, exposure dose, hard-bake temperature.</div>
+                </div>
+              </div>
+              <div class="media-placeholder small">
+                <div style="padding: 20px; text-align: center;">
+                  <div style="font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-2); font-weight: 600; margin-bottom: 8px;">Technical Challenge</div>
+                  <div style="color: var(--text); font-weight: 600; margin-bottom: 6px;">PDMS–glass plasma bonding</div>
+                  <div style="color: var(--muted); font-size: 0.9rem;">Optimized O₂ plasma exposure to 22 ± 2 s.</div>
+                </div>
+              </div>
             </div>
           </article>
 
@@ -806,7 +847,6 @@
                   <img src="images/znsn-results.png" alt="OCV plot for Zn-Sn battery anode model. Equation obtained via spline fit" />
                 </button>
               </div>
-              
             </div>
           </article>
 
@@ -841,7 +881,7 @@
                 <button class="lightbox-trigger" type="button" data-media-type="image" data-src="images/diffusion-stress-plot.png">
                   <img src="images/diffusion-stress.png" alt="Stress distribution plot for diffusion-induced stress modeling" />
                 </button>
-              </div>      
+              </div>
             </div>
           </article>
         </div>
@@ -882,7 +922,6 @@
               </svg>
             </a>
           </div>
-        </div>
         </div>
       </div>
     </section>
